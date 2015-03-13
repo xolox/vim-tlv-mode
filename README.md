@@ -99,7 +99,9 @@ on GitHub).
 
 If you have questions, bug reports, suggestions, etc. the author can be
 contacted at <peter@peterodding.com>. The latest version is available at
-[github.com/xolox/vim-tlv-mode](https://github.com/xolox/vim-tlv-mode).
+[peterodding.com/code/vim/tlv-mode] [homepage] and
+[github.com/xolox/vim-tlv-mode] [github-tlv-mode]. If you like the plug-in
+please vote for it on [Vim Online] [vim-online].
 
 ## License
 
@@ -109,6 +111,7 @@ make up our mind ;-).
 
 [download-tlv-mode]: http://peterodding.com/code/vim/downloads/tlv-mode.zip
 [github-tlv-mode]: https://github.com/xolox/vim-tlv-mode
+[homepage]: http://peterodding.com/code/vim/tlv-mode/
 [indentexpr]: http://vimdoc.sourceforge.net/htmldoc/options.html#'indentexpr'
 [llw]: http://vimdoc.sourceforge.net/htmldoc/quickfix.html#location-list-window
 [m4]: http://en.wikipedia.org/wiki/M4_(computer_language)
@@ -116,5 +119,6 @@ make up our mind ;-).
 [pathogen]: http://www.vim.org/scripts/script.php?script_id=2332
 [sv]: http://en.wikipedia.org/wiki/SystemVerilog
 [sv_syntax]: https://code.google.com/p/vim/source/browse/runtime/syntax/systemverilog.vim
+[vim-online]: http://www.vim.org/scripts/script.php?script_id=5130
 [vim]: http://www.vim.org/
 [vundle]: https://github.com/gmarik/vundle
