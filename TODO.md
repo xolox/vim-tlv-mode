@@ -2,17 +2,9 @@
 
 This document lists work to be done on the *vim-tlv-mode* plug-in:
 
- * Determine the license to use
  * Get integrated syntax checking working (out of the box)
 
 Each point is discussed in more detail below.
-
-## Determine the license to use
-
-I need to determine under what license the plug-in is to be shared with the
-world. All of my existing Vim plug-ins have been shared under the [MIT license]
-[mit] but this is the first time I've developed a Vim plug-in on commission so
-I'll have to discuss this with the client.
 
 ## Get integrated syntax checking working (out of the box)
 
@@ -48,4 +40,3 @@ plug-in. Impediments for the integration between *vim-tlv-mode* and the
 My goal is to have these issues resolved (in one way or another :-) as quickly
 as possible.
 
-[mit]: http://en.wikipedia.org/wiki/MIT_License

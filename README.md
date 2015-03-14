@@ -105,8 +105,8 @@ please vote for it on [Vim Online] [vim-online].
 
 ## License
 
-The license of this Vim plug-in is to be determined, please stand by while we
-make up our mind ;-).
+This software is licensed under the [MIT license] [mit].  
+© 2015 Peter Odding &lt;<peter@peterodding.com>&gt;.
 
 
 [download-tlv-mode]: http://peterodding.com/code/vim/downloads/tlv-mode.zip
@@ -116,6 +116,7 @@ make up our mind ;-).
 [llw]: http://vimdoc.sourceforge.net/htmldoc/quickfix.html#location-list-window
 [m4]: http://en.wikipedia.org/wiki/M4_(computer_language)
 [m4_syntax]: https://code.google.com/p/vim/source/browse/runtime/syntax/m4.vim
+[mit]: http://en.wikipedia.org/wiki/MIT_License
 [pathogen]: http://www.vim.org/scripts/script.php?script_id=2332
 [sv]: http://en.wikipedia.org/wiki/SystemVerilog
 [sv_syntax]: https://code.google.com/p/vim/source/browse/runtime/syntax/systemverilog.vim
