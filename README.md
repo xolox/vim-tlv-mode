@@ -6,7 +6,8 @@ everything needed to efficiently develop TLV code in Vim:
 
  * File type detection
  * Syntax highlighting (including an optional color scheme)
- * Smart indentation
+ * Automatic (smart) indentation
+ * Automatic text folding
  * Checking for syntax errors (work in progress)
 
 Each of the features outlined above is discussed in more detail below.
@@ -74,11 +75,21 @@ Of course you are free to decide whether to use this color scheme or not, the
 choice is up to you. The syntax highlighting mode is intended to work well with
 other Vim color schemes as well.
 
-### Smart indentation
+### Automatic (smart) indentation
 
 The *vim-tlv-mode* plug-in uses Vim's ['indentexpr'] [indentexpr] option to
-implement smart indentation that understands TLV scope rules and automatically
-increases the indentation level as needed.
+implement smart indentation (that understands TLV scope rules and knows to
+ignore line type characters) and automatically increases the indentation level
+as needed.
+
+### Automatic text folding
+
+The *vim-tlv-mode* plug-in uses Vim's ['foldexpr'] [foldexpr] option to
+implement automatic text folding (that understands TLV scope rules and knows to
+ignore line type characters). This method of text folding is already a big
+improvement over indentation based folding (because that falls apart as soon as
+line type characters are introduced) but it's not perfect yet; I'd like to
+improve it further.
 
 ### Checking for syntax errors
 
@@ -110,6 +121,7 @@ This software is licensed under the [MIT license] [mit].
 
 
 [download-tlv-mode]: http://peterodding.com/code/vim/downloads/tlv-mode.zip
+[foldexpr]: http://vimdoc.sourceforge.net/htmldoc/options.html#'foldexpr'
 [github-tlv-mode]: https://github.com/xolox/vim-tlv-mode
 [homepage]: http://peterodding.com/code/vim/tlv-mode/
 [indentexpr]: http://vimdoc.sourceforge.net/htmldoc/options.html#'indentexpr'

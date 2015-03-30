@@ -4,7 +4,6 @@ This document lists work to be done on the *vim-tlv-mode* plug-in. The
 following points are in rough order of priority (in descending order):
 
  * Get integrated syntax checking working (out of the box).
- * Implement useful text folding for TLV files.
 
 Each point is discussed in more detail below.
 
@@ -41,11 +40,3 @@ plug-in. Impediments for the integration between *vim-tlv-mode* and the
 
 My goal is to have these issues resolved (in one way or another :-) as quickly
 as possible.
-
-## Implement useful text folding for TLV files
-
-It should be possible to hide code under a given scope. I believe that Vim's
-text folding feature is the best way to implement this. I'm not yet sure
-whether indentation based folding is good enough or if I should implement a
-smart text folding expression function that actually understands scoping rules
-instead of just looking at the indentation.

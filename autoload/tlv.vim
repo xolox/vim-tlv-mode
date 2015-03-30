@@ -1,10 +1,10 @@
 " Vim auto-load script
 " Language: TLV (Transaction-Level Verilog)
 " Author: Peter Odding <peter@peterodding.com>
-" Last Change: March 13, 2015
+" Last Change: March 30, 2015
 " URL: https://github.com/xolox/vim-tlv-mode
 
-let g:tlv#version = '0.1'
+let g:tlv#version = '0.2'
 
 function! tlv#compiler_is_installed() " {{{1
   " Check if the TLV compiler is installed. Returns true (1) when the compiler
@@ -64,15 +64,19 @@ function! tlv#auto_check_syntax() " {{{1
   endif
 endfunction
 
+function! tlv#foldexpr() " {{{1
+  " Support for automatic (smart) text folding. The result of this folding
+  " expression isn't exactly ideal yet, but it's one step up from indentation
+  " based text folding (that falls apart as soon as line type characters are
+  " used :-). I'd like to improve this further, but I'm not yet sure how...
+  return s:calculate_indent(getline(v:lnum)) / &tabstop
+endfunction
+
 function! tlv#indentexpr() " {{{1
   " Support for automatic (smart) indentation.
   let previous_lnum = prevnonblank(v:lnum - 1)
   let previous_line = getline(previous_lnum)
-  " Line type characters (any character in the first column other than a space
-  " or backslash) are to be considered indentation so we have to include them
-  " (manually) in the calculation of indentation. This explains why we can't
-  " use Vim's otherwise very handy indent() function :-).
-  let previous_indent = len(matchstr(previous_line, '^[^\\] *'))
+  let previous_indent = s:calculate_indent(previous_line)
   if previous_line =~ '^\s*[>|?@\\-]'
     " When the previous non blank line starts with one of the characters in
     " the [character class] above, the scope (and thus indentation) is
@@ -81,6 +85,20 @@ function! tlv#indentexpr() " {{{1
   else
     " Otherwise we stick to the current indentation level.
     return previous_indent
+  endif
+endfunction
+
+function! s:calculate_indent(line) " {{{1
+  " Calculate the indentation level of a line (as the number of spaces). This
+  " is complicated by line type characters (any character in the first column
+  " other than a space or backslash) because they are to be considered
+  " indentation so we have to include them (manually) in the calculation of
+  " indentation. This explains why we can't use Vim's otherwise very handy
+  " indent() function :-).
+  if a:line =~ '^[^\\ ] '
+    return matchend(a:line, '^[^\\] \+')
+  else
+    return matchend(a:line, '^ *')
   endif
 endfunction
 

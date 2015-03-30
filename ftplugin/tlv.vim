@@ -1,7 +1,7 @@
 " Vim file type plug-in
 " Language: TLV (Transaction-Level Verilog)
 " Author: Peter Odding <peter@peterodding.com>
-" Last Change: March 13, 2015
+" Last Change: March 30, 2015
 " URL: https://github.com/xolox/vim-tlv-mode
 
 if exists('b:did_ftplugin')
@@ -21,9 +21,13 @@ call add(s:undo_ftplugin, 'setlocal expandtab<')
 setlocal tabstop=3 shiftwidth=3
 call add(s:undo_ftplugin, 'setlocal tabstop< shiftwidth<')
 
-" Enable automatic indentation support. {{{1
+" Enable support for automatic indentation. {{{1
 setlocal indentexpr=tlv#indentexpr()
 call add(s:undo_ftplugin, 'setlocal indentexpr<')
+
+" Enable support for automatic text folding. {{{1
+setlocal foldmethod=expr foldexpr=tlv#foldexpr()
+call add(s:undo_ftplugin, 'setlocal foldmethod< foldexpr<')
 
 " }}}1
 
