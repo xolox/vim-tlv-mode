@@ -103,11 +103,23 @@ Recommended color scheme included ~
 
 There is a recommended color scheme for editing Transaction-Level Verilog code
 and _vim-tlv-mode_ contains a Vim color scheme script called (you guessed it
-:-) _tlv_ that provides this recommended color scheme to Vim.
+:-) _tlv_ that provides this recommended color scheme to Vim. Of course you're
+free to decide whether to use this color scheme or not, the choice is up to
+you. The syntax highlighting mode is intended to work well with other Vim color
+schemes as well.
 
-Of course you are free to decide whether to use this color scheme or not, the
-choice is up to you. The syntax highlighting mode is intended to work well with
-other Vim color schemes as well.
+The color scheme was created with graphical Vim (see |gui|) in mind because the
+recommended colors are not available in terminal Vim (because terminal Vim is
+limited to a fixed palette with a maximum of 256 colors). I may try to make the
+color scheme compatible with terminal Vim as well, but I'm not yet sure how
+well that will work.
+
+To try out the color scheme you can use the following command:
+>
+  :colorscheme tlv
+<
+If you like the color scheme you can add the command above to your |vimrc|
+script to make the choice permanent.
 
 -------------------------------------------------------------------------------
                                                *tlv-mode-automatic-indentation*

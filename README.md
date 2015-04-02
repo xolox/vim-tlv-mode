@@ -68,11 +68,23 @@ highlighting support] [m4_syntax] to highlight M4 macros embedded in TLV files.
 
 There is a recommended color scheme for editing Transaction-Level Verilog code
 and *vim-tlv-mode* contains a Vim color scheme script called (you guessed it
-:-) *tlv* that provides this recommended color scheme to Vim.
+:-) *tlv* that provides this recommended color scheme to Vim. Of course you're
+free to decide whether to use this color scheme or not, the choice is up to
+you. The syntax highlighting mode is intended to work well with other Vim color
+schemes as well.
 
-Of course you are free to decide whether to use this color scheme or not, the
-choice is up to you. The syntax highlighting mode is intended to work well with
-other Vim color schemes as well.
+The color scheme was created with [graphical Vim] [gvim] in mind because the
+recommended colors are not available in terminal Vim (because terminal Vim is
+limited to a fixed palette with a maximum of 256 colors). I may try to make the
+color scheme compatible with terminal Vim as well, but I'm not yet sure how
+well that will work.
+
+To try out the color scheme you can use the following command:
+
+    :colorscheme tlv
+
+If you like the color scheme you can add the command above to your [vimrc
+script] [vimrc] to make the choice permanent.
 
 ### Automatic (smart) indentation
 
@@ -121,7 +133,9 @@ This software is licensed under the [MIT license] [mit].
 
 [foldexpr]: http://vimdoc.sourceforge.net/htmldoc/options.html#'foldexpr'
 [github-tlv-mode]: https://github.com/xolox/vim-tlv-mode
+[gvim]: http://vimdoc.sourceforge.net/htmldoc/gui.html#gui
 [homepage]: http://peterodding.com/code/vim/tlv-mode/
+[howto-install]: https://github.com/xolox/vim-tlv-mode/blob/master/INSTALL.md
 [indentexpr]: http://vimdoc.sourceforge.net/htmldoc/options.html#'indentexpr'
 [llw]: http://vimdoc.sourceforge.net/htmldoc/quickfix.html#location-list-window
 [m4]: http://en.wikipedia.org/wiki/M4_(computer_language)
@@ -131,4 +145,4 @@ This software is licensed under the [MIT license] [mit].
 [sv_syntax]: https://code.google.com/p/vim/source/browse/runtime/syntax/systemverilog.vim
 [vim-online]: http://www.vim.org/scripts/script.php?script_id=5130
 [vim]: http://www.vim.org/
-[howto-install]: https://github.com/xolox/vim-tlv-mode/blob/master/INSTALL.md
+[vimrc]: http://vimdoc.sourceforge.net/htmldoc/starting.html#vimrc
