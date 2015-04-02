@@ -18,11 +18,10 @@ stay tuned: As soon as TLV has been launched I will provide references here.*
 
 ## Install & first use
 
-Unzip the [most recent ZIP archive] [download-tlv-mode] of the *vim-tlv-mode* plug-in inside your Vim profile directory (usually this is `~/.vim` on UNIX and `%USERPROFILE%\vimfiles` on Windows), restart Vim and execute the command `:helptags ~/.vim/doc` (use `:helptags ~\vimfiles\doc` instead on Windows).
-
-If you prefer you can also use [Pathogen] [pathogen], [Vundle] [vundle] or a similar tool to install and update the *vim-tlv-mode* plug-in using a local clone of [the git repository] [github-tlv-mode].
-
-Now try it out: Edit a `*.tlv` file and inspect the syntax highlighting in `\TLV` code blocks! You can also play around with the smart indentation to get a feel for how it works.
+Please refer to the [installation instructions] [howto-install] available on
+GitHub. Once you've installed the plug-in try it out: Edit a `*.tlv` file and
+inspect the syntax highlighting in `\TLV` code blocks! You can also play around
+with the smart indentation to get a feel for how it works.
 
 ## Features
 
@@ -120,7 +119,6 @@ This software is licensed under the [MIT license] [mit].
 © 2015 Peter Odding &lt;<peter@peterodding.com>&gt;.
 
 
-[download-tlv-mode]: http://peterodding.com/code/vim/downloads/tlv-mode.zip
 [foldexpr]: http://vimdoc.sourceforge.net/htmldoc/options.html#'foldexpr'
 [github-tlv-mode]: https://github.com/xolox/vim-tlv-mode
 [homepage]: http://peterodding.com/code/vim/tlv-mode/
@@ -129,9 +127,8 @@ This software is licensed under the [MIT license] [mit].
 [m4]: http://en.wikipedia.org/wiki/M4_(computer_language)
 [m4_syntax]: https://code.google.com/p/vim/source/browse/runtime/syntax/m4.vim
 [mit]: http://en.wikipedia.org/wiki/MIT_License
-[pathogen]: http://www.vim.org/scripts/script.php?script_id=2332
 [sv]: http://en.wikipedia.org/wiki/SystemVerilog
 [sv_syntax]: https://code.google.com/p/vim/source/browse/runtime/syntax/systemverilog.vim
 [vim-online]: http://www.vim.org/scripts/script.php?script_id=5130
 [vim]: http://www.vim.org/
-[vundle]: https://github.com/gmarik/vundle
+[howto-install]: https://github.com/xolox/vim-tlv-mode/blob/master/INSTALL.md

@@ -1,10 +1,10 @@
 " Vim auto-load script
 " Language: TLV (Transaction-Level Verilog)
 " Author: Peter Odding <peter@peterodding.com>
-" Last Change: March 30, 2015
+" Last Change: April 2, 2015
 " URL: https://github.com/xolox/vim-tlv-mode
 
-let g:tlv#version = '0.2'
+let g:tlv#version = '0.2.1'
 
 function! tlv#compiler_is_installed() " {{{1
   " Check if the TLV compiler is installed. Returns true (1) when the compiler
