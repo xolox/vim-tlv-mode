@@ -1,7 +1,7 @@
 " Vim file type plug-in
 " Language: TLV (Transaction-Level Verilog)
 " Author: Peter Odding <peter@peterodding.com>
-" Last Change: March 30, 2015
+" Last Change: April 3, 2015
 " URL: https://github.com/xolox/vim-tlv-mode
 
 if exists('b:did_ftplugin')
@@ -28,6 +28,16 @@ call add(s:undo_ftplugin, 'setlocal indentexpr<')
 " Enable support for automatic text folding. {{{1
 setlocal foldmethod=expr foldexpr=tlv#foldexpr()
 call add(s:undo_ftplugin, 'setlocal foldmethod< foldexpr<')
+
+" Define a command to check the syntax of TLV files. {{{1
+command! -bar -buffer CheckSyntax call tlv#check_syntax()
+call add(s:undo_ftplugin, 'delcommand CheckSyntax')
+
+" Define an automatic command to check for syntax errors on save. {{{1
+augroup PluginFileTypeTLV
+  autocmd! PluginFileTypeTLV BufWritePost <buffer> call tlv#auto_check_syntax()
+augroup END
+call add(s:undo_ftplugin, 'autocmd! PluginFileTypeTLV BufWritePost <buffer>')
 
 " }}}1
 

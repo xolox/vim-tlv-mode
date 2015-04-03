@@ -108,14 +108,27 @@ To compile TLV code you need the `sandpiper` compiler. When the *vim-tlv-mode*
 plug-in sees that you have the `sandpiper` compiler installed it will
 automatically run the compiler every time you save a TLV file. If the compiler
 reports syntax warnings or errors a [location-list-window] [llw] pops up to
-show you an overview of compiler messages. When you click on a recognized line
-in the location list window you'll automatically jump to the line in the TLV
-file where the message was reported.
+show you an overview of compiler messages. When you click on a line in the
+location list window you'll automatically jump to the line in the TLV file
+where the message was reported.
 
-Please note that this feature is still in development (not finished yet) so for
-now the automatic syntax checking is disabled by default. The to-do list in the
-file `TODO.md` contains more details (refer to the version control repository
-on GitHub).
+#### Setting it up
+
+To get the automatic syntax checking working you need to have the `sandpiper`
+compiler installed on your `$PATH`. To set this up you create a symbolic link
+from a directory in your `$PATH` to the `bin/sandpiper` executable in the TLV
+compiler distribution (which also contains an `m4` directory next to the `bin`
+directory). In order to use the TLV compiler the *vim-tlv-mode* plug-in needs
+to use the command line option `-m4inc` with the absolute pathname of the `m4`
+directory. The symbolic link is used by the *vim-tlv-mode* plug-in to find the
+pathname of the `m4` directory inside the TLV compiler distribution.
+
+#### Status of this feature
+
+_Please note that this feature is still in development (not finished yet)._ It
+is working quite well already for plain TLV files but it needs more work for
+TLV files that involve significant M4 preprocessing (this breaks the file names
+and line numbers and I'm not yet sure how to match them up afterwards).
 
 ## Contact
 
